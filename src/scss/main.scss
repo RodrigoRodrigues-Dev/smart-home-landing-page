@@ -3,9 +3,11 @@
 
 //partials
 @use './partials/header';
+@use './partials/blue-background';
 
 html {
     font-size: 16px;
+    letter-spacing: 2px;
 
     @media (max-width: 1350px) {
         font-size: 14px;
@@ -18,11 +20,6 @@ html {
     @media (max-width: 950px) {
         font-size: 10px;
     }
-}
-
-.blue-background {
-    background-color: var.$color-primary;
-    height: 80vh;
 }
 
 .container {

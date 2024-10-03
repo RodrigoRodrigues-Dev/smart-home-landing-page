@@ -2,6 +2,8 @@
 @use '../components/buttons' as btns;
 
 .header {
+    z-index: 999;
+    position: sticky;
 
     &__nav, 
     &-mobile__nav, 
@@ -15,7 +17,7 @@
 
         &-links {
             display: flex;
-            font-size: 1.125rem;
+            font-size: 1rem;
             gap: 2rem;
 
             @media (max-width: 1150px) {
@@ -26,7 +28,7 @@
         &-link {
             &:hover {
                 cursor: pointer;
-                color: lighten(var.$color-primary, 30%);
+                color: darken(var.$color-primary, 25%);
             }
         }
 
@@ -109,14 +111,15 @@
                 top: 0;
                 right: 0;
                 height: 100vh;
-                overflow-x: hidden;
+                overflow-y: hidden;
                 width: 0;
                 padding: 0;
                 transition: all 0.5s;
             }
 
             &-list {
-                margin: 20rem 0rem 0rem 5rem;
+                margin-top: 10rem;
+                padding-left: 3rem;
                 font-size: 1.5rem;
                 display: flex;
                 flex-direction: column;

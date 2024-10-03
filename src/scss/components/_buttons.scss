@@ -19,6 +19,6 @@
 
     &:hover {
         cursor: pointer;
-        color: lighten(var.$color-primary, 30%);
+        color: darken(var.$color-primary, 25%);
     }
 }
