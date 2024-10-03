@@ -1,0 +1,24 @@
+@use '../base/variables' as var;
+
+@mixin primary-btn($color, $background-color, $font-size, $padding) {
+    color: $color;
+    background-color: $background-color;
+    font-size: $font-size;
+    padding: $padding;
+    border-radius: 0.5rem;
+    border: none;
+
+    &:hover {
+        cursor: pointer;
+        background-color: darken($background-color, 7%);
+    }
+}
+
+@mixin secondary-btn($color, $background-color, $font-size, $padding) {
+    @include primary-btn($color, $background-color, $font-size, $padding);
+
+    &:hover {
+        cursor: pointer;
+        color: lighten(var.$color-primary, 30%);
+    }
+}

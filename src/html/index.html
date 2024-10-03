@@ -3,9 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/dist/css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="css/main.css">
     <title>Smart Home</title>
+    <script src="js/main.js"></script>
 </head>
 <body>
+    <div class="blue-background">
+        <header class="header">
+            <div class="container">
+                <nav class="header__nav">
+                    <ul class="header__nav-links">
+                        <li class="header__nav-link">Home</li>
+                        <li class="header__nav-link">About</li>
+                        <li class="header__nav-link">Testimonials</li>
+                        <li class="header__nav-link">Contact</li>
+                    </ul>
+                    <h1 class="header__nav-title">
+                        smartHome
+                    </h1>
+                    <div class="header__nav-buttons">
+                        <button class="header__nav__buttons-login">Login</button>
+                        <button class="header__nav__buttons-sign-up">Sign up</button>
+                    </div>
+                </nav>
+                <nav class="header-mobile">
+                    <h1 class="header-mobile__title">
+                        smartHome
+                    </h1>
+                    <div class="header-mobile__menu">
+                        <div class="header-mobile__menu-container">
+                            <span class="material-symbols-outlined header-mobile__menu-close">
+                                close
+                            </span>
+                            <ul class="header-mobile__menu-list">
+                                <li class="header-mobile__menu-item">
+                                    <span class="material-symbols-outlined header-mobile__menu-icon">
+                                        home
+                                    </span>
+                                    Home
+                                </li>
+                                <li class="header-mobile__menu-item">
+                                    <span class="material-symbols-outlined header-mobile__menu-icon">
+                                        info
+                                    </span>
+                                    About
+                                </li>
+                                <li class="header-mobile__menu-item">
+                                    <span class="material-symbols-outlined header-mobile__menu-icon">
+                                        chat
+                                    </span>
+                                    Testimonials
+                                </li>
+                                <li class="header-mobile__menu-item">
+                                    <span class="material-symbols-outlined header-mobile__menu-icon">
+                                        call
+                                    </span>
+                                    Contact
+                                </li>
+                            </ul>
+                            <div class="header-mobile__buttons">
+                                <button class="header-mobile__buttons-login">Login</button>
+                                <button class="header-mobile__buttons-sign-up">Sign up</button>
+                            </div>
+                        </div>
+                        <span class="header-mobile__menu--after"></span>
+                    </div>
+                    <span class="material-symbols-outlined header-mobile__nav-toggle">
+                        menu
+                    </span>
+                </nav>                
+            </div>
+        </header>
+    </div>
 </body>
 </html>

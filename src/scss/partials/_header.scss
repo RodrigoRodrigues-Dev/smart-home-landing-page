@@ -1,0 +1,153 @@
+@use '../base/variables' as var;
+@use '../components/buttons' as btns;
+
+.header {
+
+    &__nav, 
+    &-mobile__nav, 
+    &-mobile {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 2rem 0;
+        width: 100%;
+        color: var.$color-white;
+
+        &-links {
+            display: flex;
+            font-size: 1.125rem;
+            gap: 2rem;
+
+            @media (max-width: 1150px) {
+                gap: 1rem;
+            }
+        }
+
+        &-link {
+            &:hover {
+                cursor: pointer;
+                color: lighten(var.$color-primary, 30%);
+            }
+        }
+
+        &-title, &__title {
+            font-size: 2rem;
+            font-weight: bold;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+        }
+
+        &__buttons {
+            display: flex;
+            justify-content: end;
+            width: auto;
+
+            &-login {
+                @include btns.secondary-btn(var.$color-white, transparent, 1.063rem, 1rem 1rem);
+                margin-right: 1rem;
+            }
+
+            &-sign-up {
+                @include btns.primary-btn(var.$color-black, var.$color-white, 1.125rem, 1rem 3rem);
+                font-weight: 500;
+            }
+        }
+    }
+
+    &__nav {
+        @media (max-width: 767px) {
+            display: none;
+        }
+    }
+
+    &-mobile {
+        justify-content: end;
+
+        @media (min-width: 767px) {
+            display: none;
+        }
+
+        &__actions {
+            z-index: 999;
+
+            &-close {
+                display: none;
+            }
+        }
+
+        &__menu {
+            &--after {
+                display: none;
+            }
+
+            &--active {
+                .header-mobile__menu-container {
+                    width: 280px;
+                }
+
+                .header-mobile__menu--after {
+                    display: block;
+                }
+            }
+
+            &-close {
+                position: absolute;
+                top: 2%;
+                right: 5%;
+            }
+
+            &-container {
+                z-index: 999;
+                background-color: var.$color-primary;
+                border-radius: 5rem 0 0 5rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                position: absolute;
+                top: 0;
+                right: 0;
+                height: 100vh;
+                overflow-x: hidden;
+                width: 0;
+                padding: 0;
+                transition: all 0.5s;
+            }
+
+            &-list {
+                margin: 20rem 0rem 0rem 5rem;
+                font-size: 1.5rem;
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                gap: 3rem;
+                width: 100%;
+            }
+
+            &-item {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+            }
+
+            &--after {
+                content: '';
+                z-index: 1;
+                width: 100vw;
+                height: inherit;
+                position: fixed;
+                inset: 0; 
+                background-color: rgba(var.$color-black, 0.6);        
+            }
+        }
+
+        &__buttons {
+            position: absolute;
+            width: 159px;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 15%;
+        }
+    }
+}

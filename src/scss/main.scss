@@ -1,1 +1,35 @@
-@use './base/reset.scss';
+@use './base/reset';
+@use './base/variables' as var;
+
+//partials
+@use './partials/header';
+
+html {
+    font-size: 16px;
+
+    @media (max-width: 1350px) {
+        font-size: 14px;
+    }
+
+    @media (max-width: 1250px) {
+        font-size: 12px;
+    }
+
+    @media (max-width: 950px) {
+        font-size: 10px;
+    }
+}
+
+.blue-background {
+    background-color: var.$color-primary;
+    height: 80vh;
+}
+
+.container {
+    max-width: 85%;
+    margin: 0 auto;
+
+    @media (min-width: 1720px) {
+        max-width: 70%;
+    }
+}
