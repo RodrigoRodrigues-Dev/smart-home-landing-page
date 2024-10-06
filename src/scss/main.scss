@@ -4,6 +4,7 @@
 //partials
 @use './partials/header';
 @use './partials/blue-background';
+@use './partials/hero';
 
 html {
     font-size: 16px;
@@ -29,4 +30,17 @@ html {
     @media (min-width: 1720px) {
         max-width: 70%;
     }
+}
+
+@mixin title($font-size, $color) {
+    font-size: $font-size;
+    color: $color;
+}
+
+.title--big {
+    @include title(5.313rem, var.$color-black)
+}
+
+.title--big-light {
+    @include title(5.313rem, var.$color-white);
 }

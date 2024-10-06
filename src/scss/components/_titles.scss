@@ -1,0 +1,8 @@
+@mixin title($font-size, $color) {
+    font-size: $font-size;
+    color: $color;
+}
+
+@mixin title--Big($font-size, $color) {
+    @include title($font-size, $color);
+}
