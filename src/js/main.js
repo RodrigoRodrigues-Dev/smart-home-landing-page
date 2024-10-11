@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const btnOpenHeader = document.querySelector('.header-mobile__nav-toggle');
-    const btnCloseHeader = document.querySelector('.header-mobile__menu-close');
+    const btnOpenHeader = document.querySelector('.header-mobile__toggle');
+    const btnCloseHeader = document.querySelector('.header-mobile__close');
     const pseudoElement = document.querySelector('.header-mobile__menu--after');
-    const menuList = document.querySelectorAll('.header-mobile__menu-item');
+    const menuList = document.querySelectorAll('.header-mobile__item');
 
     const buttons = [btnOpenHeader, btnCloseHeader, pseudoElement];
 

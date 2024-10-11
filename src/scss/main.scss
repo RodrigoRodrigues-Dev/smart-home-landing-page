@@ -5,6 +5,7 @@
 @use './partials/header';
 @use './partials/blue-background';
 @use './partials/hero';
+@use './partials/about';
 
 html {
     font-size: 16px;
@@ -32,15 +33,43 @@ html {
     }
 }
 
-@mixin title($font-size, $color) {
+@mixin title($font-size, $color, $font-weight) {
     font-size: $font-size;
+    font-weight: $font-weight;
     color: $color;
 }
 
+.title--medium {
+    @include title(3.25rem, var.$dark-charcoal, 700);
+
+    @media (max-width: 530px) {
+        @include title(2.5rem, var.$dark-charcoal, 700);
+    }
+}
+
 .title--big {
-    @include title(5.313rem, var.$color-black)
+    @include title(5.313rem, var.$dark-charcoal, bold);
 }
 
 .title--big-light {
-    @include title(5.313rem, var.$color-white);
+    @include title(5.313rem, var.$color-white, bold);
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var.$deep-blue; 
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: darken(var.$deep-blue, 10%); 
 }
