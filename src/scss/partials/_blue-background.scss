@@ -75,11 +75,20 @@
             box-shadow: none;
         }
 
+        &--clients {
+            @include circles.circle(350px, 350px, #fff, 100px, rgba(#1E5AFA, 0.1));
+            top: 180px;
+            right: -160px;
+            left: auto;
+            box-shadow: none;
+            z-index: -1;
+        }
+
         &__container {
             top: 0;
             width: 100%;
             height: 100%;
-            overflow: hidden;
+            overflow-x: hidden;
             position: absolute;
         }
     }
